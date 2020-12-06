@@ -105,18 +105,19 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
     cjmcu811_init(&hi2c1);
-    lcd16x2_i2c_init(&hi2c1);
+//    lcd16x2_i2c_init(&hi2c1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
     while (1) {
-        /* USER CODE END WHILE */
+    /* USER CODE END WHILE */
 
-        /* USER CODE BEGIN 3 */
+    /* USER CODE BEGIN 3 */
         cjmcu811_ReadAlgorithmData(&hi2c1, &CO2, &TVOC);
-        /* USER CODE END 3 */
+
     }
+  /* USER CODE END 3 */
 }
 
 /**
@@ -255,7 +256,7 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
+    /* User can add his own implementation to report the HAL error return state */
 
   /* USER CODE END Error_Handler_Debug */
 }
